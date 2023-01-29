@@ -5,7 +5,7 @@ const port = 8000 ;
 const mongoose = require('mongoose');
 const routes = require("../routes")
 app.use(cors({
-  origin: ['/*']
+  origin: ['https://hallbooking.vercel.app']
 }))
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
