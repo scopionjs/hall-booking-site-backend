@@ -4,9 +4,12 @@ const app = express();
 const port = 8000 ;
 const mongoose = require('mongoose');
 const routes = require("../routes")
+app.use(cors({
+  origin: ['/*']
+}))
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(cors())
+
 app.use("/api",routes)
 
 mongoose.set('strictQuery', false);
